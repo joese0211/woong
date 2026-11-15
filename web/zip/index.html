@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>압축 풀기 · ZIP 만들기 — 웅집</title>
+<meta name="description" content="ZIP, 7Z, RAR 압축 풀기와 ZIP·7Z 만들기(암호 가능). 한글 파일 이름도 깨지지 않아요. 설치 없이 이 화면 안에서 바로 처리하는 웅툴즈 웅집 인터넷판.">
+<link rel="canonical" href="https://joese0211.github.io/woong/web/zip/">
+<meta property="og:title" content="압축 풀기 · ZIP 만들기 — 웅집">
+<meta property="og:description" content="ZIP·7Z·RAR 풀기, ZIP·7Z 만들기. 파일은 서버로 올라가지 않아요.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://joese0211.github.io/woong/web/zip/">
+<meta name="robots" content="index,follow">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"웅집 인터넷판","url":"https://joese0211.github.io/woong/web/zip/","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","description":"ZIP·7Z·RAR 압축 풀기, ZIP·7Z 만들기(암호 가능). 파일은 브라우저 안에서만 처리돼요.","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"},"publisher":{"@type":"Organization","name":"웅툴즈(NEEDMADE)","url":"https://woongtools.com"}}
+</script>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Crect width=%2764%27 height=%2764%27 rx=%2714%27 fill=%27%23C8291F%27/%3E%3Ctext x=%2732%27 y=%2745%27 font-size=%2740%27 font-weight=%27700%27 text-anchor=%27middle%27 fill=%27%23fff%27 font-family=%27sans-serif%27%3E%EC%9B%85%3C/text%3E%3C/svg%3E">
+  <script type="module" crossorigin src="../assets/zip-7D2SzetA.js"></script>
+  <link rel="modulepreload" crossorigin href="../assets/ui-BPnGmIU_.js">
+  <link rel="modulepreload" crossorigin href="../assets/rolldown-runtime-XKyaHtl9.js">
+  <link rel="modulepreload" crossorigin href="../assets/preload-helper-DclECHGd.js">
+  <link rel="modulepreload" crossorigin href="../assets/zipw-BI_dveNT.js">
+  <link rel="stylesheet" crossorigin href="../assets/style-DAj2b0-j.css">
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="../">웅<b>툴즈</b> 인터넷판</a>
+  <nav>
+    <a href="../pdf/">웅PDF</a><a href="./" aria-current="page">웅집</a><a href="../nukki/">웅누끼</a><a href="../capture/">웅캡처 꾸미기</a><a href="../3d/">웅3D</a>
+  </nav>
+</header>
+<main>
+  <h1>웅집</h1>
+  <p class="lead">압축 파일을 놓으면 풀어 주고, 일반 파일을 놓으면 ZIP으로 묶어 줘요. 파일은 서버로 올라가지 않아요.</p>
+
+  <div id="drop" class="drop">
+    <strong>파일이나 폴더를 여기에 놓으세요</strong>
+    <span>ZIP · 7Z · RAR · TAR 등 압축 파일 → 풀기 / 그 밖의 파일 → 묶기</span>
+    <input id="file" type="file" multiple hidden>
+  </div>
+  <div id="msg" class="msg" role="status"></div>
+  <div id="panel" class="msg hide"></div>
+
+  <section id="open" class="hide">
+    <div class="bar">
+      <strong id="o-title" class="grow"></strong>
+      <button class="btn" id="o-zip">모두 ZIP 하나로 받기</button>
+      <button class="btn primary" id="o-dir">폴더에 모두 풀기</button>
+    </div>
+    <div id="o-list" class="list"></div>
+  </section>
+
+  <section id="make" class="hide">
+    <div class="bar">
+      <strong id="m-title" class="grow"></strong>
+      <button class="btn sm" id="m-clear">비우기</button>
+    </div>
+    <div id="m-list" class="list"></div>
+    <div class="bar">
+      <label class="f">모양
+        <select id="m-fmt"><option value="zip">ZIP (누구나 열 수 있어요)</option><option value="7z">7Z (더 작게 묶어요)</option></select>
+      </label>
+      <label class="f">암호 (없으면 비워 두세요)
+        <input id="m-pw" type="password" autocomplete="new-password" placeholder="선택">
+      </label>
+      <span class="grow"></span>
+      <button class="btn primary" id="m-go">묶어서 받기</button>
+    </div>
+    <p class="pcnote">암호를 잊으면 풀 수 없으니 꼭 적어 두세요.</p>
+  </section>
+</main>
+<footer class="foot">
+  파일은 서버로 올라가지 않아요. · 큰 파일은 <a href="https://joese0211.github.io/woong/" target="_blank" rel="noopener">PC판 웅집</a> · <a href="../licenses.html">사용한 부품</a>
+</footer>
+</body>
+</html>

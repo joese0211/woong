@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>사진 배경 지우기(누끼) — 웅누끼</title>
+<meta name="description" content="사진 배경을 AI로 지워 투명 PNG로 받아요. 여러 장 한꺼번에, 가입도 업로드도 없이 내 브라우저 안에서 처리하는 웅툴즈 웅누끼 인터넷판.">
+<link rel="canonical" href="https://joese0211.github.io/woong/web/nukki/">
+<meta property="og:title" content="사진 배경 지우기(누끼) — 웅누끼">
+<meta property="og:description" content="사진 배경을 AI로 지우고 투명 PNG로 받아요. 사진은 서버로 올라가지 않아요.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://joese0211.github.io/woong/web/nukki/">
+<meta name="robots" content="index,follow">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"웅누끼 인터넷판","url":"https://joese0211.github.io/woong/web/nukki/","applicationCategory":"MultimediaApplication","operatingSystem":"Any","description":"사진 배경을 AI로 지워 투명 PNG로 받아요. 사진은 브라우저 안에서만 처리돼요.","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"},"publisher":{"@type":"Organization","name":"웅툴즈(NEEDMADE)","url":"https://woongtools.com"}}
+</script>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Crect width=%2764%27 height=%2764%27 rx=%2714%27 fill=%27%23C8291F%27/%3E%3Ctext x=%2732%27 y=%2745%27 font-size=%2740%27 font-weight=%27700%27 text-anchor=%27middle%27 fill=%27%23fff%27 font-family=%27sans-serif%27%3E%EC%9B%85%3C/text%3E%3C/svg%3E">
+<style>.res{grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px;margin-top:14px;display:grid}.res .it{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);flex-direction:column;gap:8px;padding:10px;display:flex}.res .pv{background:repeating-conic-gradient(#e2e2d6 0 25%, #f3f3e9 0 50%) 0 0 / 16px 16px;border-radius:8px;justify-content:center;align-items:center;min-height:160px;display:flex;overflow:hidden}.res .pv canvas{width:auto;max-width:100%;height:auto;max-height:300px}.res .pv.col{background:var(--bgc,#fff)}.res .nm{color:var(--sub);text-overflow:ellipsis;white-space:nowrap;font-size:13px;overflow:hidden}.res .stat{color:var(--sub);font-size:13px}.res .acts{flex-wrap:wrap;gap:6px;display:flex}</style>
+  <script type="module" crossorigin src="../assets/nukki-e_GY1x6f.js"></script>
+  <link rel="modulepreload" crossorigin href="../assets/ui-BPnGmIU_.js">
+  <link rel="modulepreload" crossorigin href="../assets/rolldown-runtime-XKyaHtl9.js">
+  <link rel="modulepreload" crossorigin href="../assets/preload-helper-DclECHGd.js">
+  <link rel="modulepreload" crossorigin href="../assets/zipw-BI_dveNT.js">
+  <link rel="stylesheet" crossorigin href="../assets/style-DAj2b0-j.css">
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="../">웅<b>툴즈</b> 인터넷판</a>
+  <nav>
+    <a href="../pdf/">웅PDF</a><a href="../zip/">웅집</a><a href="./" aria-current="page">웅누끼</a><a href="../capture/">웅캡처 꾸미기</a><a href="../3d/">웅3D</a>
+  </nav>
+</header>
+<main>
+  <h1>웅누끼</h1>
+  <p class="lead">사진을 놓으면 배경이 지워져요. 여러 장도 한꺼번에 돼요. 사진은 서버로 올라가지 않아요.</p>
+
+  <div id="drop" class="drop">
+    <strong>사진을 여기에 놓으세요</strong>
+    <span>또는 눌러서 고르기 · JPG · PNG · WebP</span>
+    <input id="file" type="file" accept="image/*" multiple hidden>
+  </div>
+  <div id="msg" class="msg" role="status"></div>
+
+  <div id="model" class="msg hide">
+    <div id="model-t"></div>
+    <div class="progress"><i id="model-bar"></i></div>
+  </div>
+
+  <section id="out" class="hide">
+    <div class="bar">
+      <label class="row-inline" style="gap:6px"><input type="checkbox" id="transp" checked> 투명 바탕으로 보기</label>
+      <label class="row-inline" style="gap:6px">바탕색 <input type="color" id="bg" value="#ffffff"></label>
+      <span class="grow"></span>
+      <button class="btn" id="b-zip">모두 PNG로 한 번에 받기(ZIP)</button>
+    </div>
+    <div id="res" class="res"></div>
+  </section>
+  <p class="pcnote" id="slow"></p>
+</main>
+<footer class="foot">
+  사진은 서버로 올라가지 않아요. · 더 빠르고 정밀하게는 <a href="https://joese0211.github.io/woong/" target="_blank" rel="noopener">PC판 웅누끼</a> · <a href="../licenses.html">사용한 부품</a>
+</footer>
+</body>
+</html>
